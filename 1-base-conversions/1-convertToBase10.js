@@ -3,7 +3,13 @@
 /******************************************************************************/
 
 const convertToBase10 = str => {
-  // Your code here 
+  let sub = str.substring(2)
+  if (str.substring(0,2)==='0b'){
+  return parseInt(sub,2)
+} else {
+  return parseInt(sub,16)
+
+}
 };
 
 /******************************************************************************/

@@ -22,14 +22,20 @@ const binaryStringToArray = str => {
 };
 
 const binaryToAscii = str => {
-  // Your code here 
+let array = binaryStringToArray(str)
+let result = ''
+for(i=0;i<array.length;i++){
+  let decimal = parseInt(array[i], 2)
+  let asci = String.fromCharCode(decimal)
+  result += asci
+}
+return result
 };
 
 /******************************************************************************/
 
 console.log(binaryToAscii('011000010110001001100011'));
 // 'abc'
-
 console.log(binaryToAscii('010000010100001001000011'));
 // 'ABC'
 
